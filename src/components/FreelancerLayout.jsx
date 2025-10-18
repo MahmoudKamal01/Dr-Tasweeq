@@ -6,7 +6,7 @@ import {
   FiCheckSquare,
   FiMessageCircle,
   FiFolder,
-  FiBarChart3,
+  FiBarChart,
   FiLogOut,
   FiMenu,
   FiX,
@@ -27,7 +27,7 @@ const FreelancerLayout = ({ children }) => {
     { path: "/freelancer/tasks", label: "My Tasks", icon: FiCheckSquare },
     { path: "/freelancer/chat", label: "Chat", icon: FiMessageCircle },
     { path: "/freelancer/files", label: "Files", icon: FiFolder },
-    { path: "/freelancer/kpis", label: "KPIs", icon: FiBarChart3 },
+    { path: "/freelancer/kpis", label: "KPIs", icon: FiBarChart },
   ];
 
   const handleLogout = () => {
