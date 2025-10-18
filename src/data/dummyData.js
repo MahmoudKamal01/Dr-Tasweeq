@@ -432,3 +432,152 @@ export const testimonials = [
     avatar: "https://ui-avatars.com/api/?name=David+Chen&background=random",
   },
 ];
+
+// Freelancer Data
+export const freelancerTasks = [
+  {
+    id: 1,
+    title: "Design Instagram Ad",
+    project: "ABC Campaign",
+    status: "in-progress",
+    deadline: "2025-01-18",
+    priority: "high",
+    description: "Create engaging Instagram ad for the new product launch",
+    assignedBy: "John Client",
+    progress: 75,
+  },
+  {
+    id: 2,
+    title: "Landing Page UI",
+    project: "Website Revamp",
+    status: "pending",
+    deadline: "2025-01-20",
+    priority: "medium",
+    description: "Design modern landing page for the website redesign",
+    assignedBy: "Admin User",
+    progress: 0,
+  },
+  {
+    id: 3,
+    title: "Logo Concept",
+    project: "Brand Refresh",
+    status: "completed",
+    deadline: "2025-01-10",
+    priority: "high",
+    description: "Create new logo concepts for brand refresh",
+    assignedBy: "John Client",
+    progress: 100,
+  },
+  {
+    id: 4,
+    title: "Social Media Graphics",
+    project: "Marketing Campaign",
+    status: "in-progress",
+    deadline: "2025-01-22",
+    priority: "medium",
+    description: "Design social media graphics for the campaign",
+    assignedBy: "Admin User",
+    progress: 40,
+  },
+  {
+    id: 5,
+    title: "Email Template",
+    project: "Newsletter Design",
+    status: "pending",
+    deadline: "2025-01-25",
+    priority: "low",
+    description: "Create responsive email template for newsletter",
+    assignedBy: "John Client",
+    progress: 0,
+  },
+];
+
+export const freelancerFiles = [
+  {
+    project: "ABC Campaign",
+    files: [
+      { name: "brief.pdf", size: "2.3 MB", type: "pdf", uploaded: "2025-01-15" },
+      { name: "mockup1.png", size: "1.8 MB", type: "image", uploaded: "2025-01-16" },
+      { name: "final.zip", size: "5.2 MB", type: "archive", uploaded: "2025-01-17" },
+    ],
+  },
+  {
+    project: "Website Revamp",
+    files: [
+      { name: "wireframe.pdf", size: "1.5 MB", type: "pdf", uploaded: "2025-01-14" },
+      { name: "colors.ai", size: "3.1 MB", type: "design", uploaded: "2025-01-15" },
+      { name: "assets.zip", size: "8.7 MB", type: "archive", uploaded: "2025-01-16" },
+    ],
+  },
+  {
+    project: "Brand Refresh",
+    files: [
+      { name: "logo_variations.png", size: "2.1 MB", type: "image", uploaded: "2025-01-12" },
+      { name: "brand_guidelines.pdf", size: "4.3 MB", type: "pdf", uploaded: "2025-01-13" },
+    ],
+  },
+];
+
+export const chatMessages = [
+  {
+    id: 1,
+    sender: "John Client",
+    message: "Hi Sarah! How's the Instagram ad coming along?",
+    timestamp: "2025-01-17T10:30:00Z",
+    isOwn: false,
+    avatar: "https://ui-avatars.com/api/?name=John+Client&background=DC1F2E&color=fff",
+  },
+  {
+    id: 2,
+    sender: "Sarah Freelancer",
+    message: "Hi John! It's going great, I'm about 75% done. Should have the first draft ready by tomorrow.",
+    timestamp: "2025-01-17T10:32:00Z",
+    isOwn: true,
+    avatar: "https://ui-avatars.com/api/?name=Sarah+Freelancer&background=10B981&color=fff",
+  },
+  {
+    id: 3,
+    sender: "Admin User",
+    message: "Great work Sarah! The landing page design looks fantastic.",
+    timestamp: "2025-01-17T11:15:00Z",
+    isOwn: false,
+    avatar: "https://ui-avatars.com/api/?name=Admin+User&background=4F46E5&color=fff",
+  },
+  {
+    id: 4,
+    sender: "Sarah Freelancer",
+    message: "Thank you! I'm really happy with how it turned out. Any feedback on the color scheme?",
+    timestamp: "2025-01-17T11:17:00Z",
+    isOwn: true,
+    avatar: "https://ui-avatars.com/api/?name=Sarah+Freelancer&background=10B981&color=fff",
+  },
+  {
+    id: 5,
+    sender: "John Client",
+    message: "The colors look perfect! Can't wait to see the final version.",
+    timestamp: "2025-01-17T11:20:00Z",
+    isOwn: false,
+    avatar: "https://ui-avatars.com/api/?name=John+Client&background=DC1F2E&color=fff",
+  },
+];
+
+export const freelancerKPIs = {
+  activeTasks: 4,
+  completedTasks: 12,
+  onTimeRate: 92,
+  monthlyProgress: 78,
+  averageDeliveryTime: "2.3 days",
+  projectsThisMonth: 8,
+  rating: 4.8,
+  tasksPerWeek: [
+    { week: "Week 1", tasks: 3 },
+    { week: "Week 2", tasks: 5 },
+    { week: "Week 3", tasks: 4 },
+    { week: "Week 4", tasks: 6 },
+  ],
+  taskStatusDistribution: [
+    { status: "Completed", count: 12, color: "#10B981" },
+    { status: "In Progress", count: 4, color: "#3B82F6" },
+    { status: "Pending", count: 2, color: "#F59E0B" },
+  ],
+};

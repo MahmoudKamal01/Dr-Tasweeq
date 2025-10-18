@@ -15,6 +15,11 @@ import AdminProjects from "./pages/admin/AdminProjects";
 import AdminFinance from "./pages/admin/AdminFinance";
 import AdminContent from "./pages/admin/AdminContent";
 import AdminSettings from "./pages/admin/AdminSettings";
+import FreelancerDashboard from "./pages/freelancer/FreelancerDashboard";
+import FreelancerTasks from "./pages/freelancer/FreelancerTasks";
+import FreelancerChat from "./pages/freelancer/FreelancerChat";
+import FreelancerFiles from "./pages/freelancer/FreelancerFiles";
+import FreelancerKPIs from "./pages/freelancer/FreelancerKPIs";
 
 // Protected Route Component
 function ProtectedRoute({ children, allowedRole }) {
@@ -136,6 +141,48 @@ function AppRouter() {
             element={
               <ProtectedRoute allowedRole="admin">
                 <AdminSettings />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Freelancer Routes */}
+          <Route
+            path="/freelancer/dashboard"
+            element={
+              <ProtectedRoute allowedRole="freelancer">
+                <FreelancerDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/freelancer/tasks"
+            element={
+              <ProtectedRoute allowedRole="freelancer">
+                <FreelancerTasks />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/freelancer/chat"
+            element={
+              <ProtectedRoute allowedRole="freelancer">
+                <FreelancerChat />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/freelancer/files"
+            element={
+              <ProtectedRoute allowedRole="freelancer">
+                <FreelancerFiles />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/freelancer/kpis"
+            element={
+              <ProtectedRoute allowedRole="freelancer">
+                <FreelancerKPIs />
               </ProtectedRoute>
             }
           />

@@ -38,6 +38,14 @@ export const AuthProvider = ({ children }) => {
         avatar:
           "https://ui-avatars.com/api/?name=Admin+User&background=4F46E5&color=fff",
       };
+    } else if (email === "freelancer@gmail.com") {
+      userData = {
+        email,
+        name: "Sarah Freelancer",
+        role: "freelancer",
+        avatar:
+          "https://ui-avatars.com/api/?name=Sarah+Freelancer&background=10B981&color=fff",
+      };
     } else {
       return { success: false, message: "User not found" };
     }

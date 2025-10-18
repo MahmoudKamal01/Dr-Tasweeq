@@ -13,9 +13,11 @@ function LoginPage() {
 
   useEffect(() => {
     if (user) {
-      navigate(
-        user.role === "admin" ? "/admin/dashboard" : "/client/dashboard"
-      );
+      const redirectPath = 
+        user.role === "admin" ? "/admin/dashboard" :
+        user.role === "freelancer" ? "/freelancer/dashboard" :
+        "/client/dashboard";
+      navigate(redirectPath);
     }
   }, [user, navigate]);
 
@@ -27,8 +29,10 @@ function LoginPage() {
     const result = login(email, password);
 
     if (result.success) {
-      const redirectPath =
-        email === "admin@gmail.com" ? "/admin/dashboard" : "/client/dashboard";
+      const redirectPath = 
+        email === "admin@gmail.com" ? "/admin/dashboard" :
+        email === "freelancer@gmail.com" ? "/freelancer/dashboard" :
+        "/client/dashboard";
       navigate(redirectPath);
     } else {
       setError(result.message);
@@ -41,8 +45,11 @@ function LoginPage() {
     if (type === "client") {
       setEmail("client@gmail.com");
       setPassword("123456");
-    } else {
+    } else if (type === "admin") {
       setEmail("admin@gmail.com");
+      setPassword("123456");
+    } else if (type === "freelancer") {
+      setEmail("freelancer@gmail.com");
       setPassword("123456");
     }
   };
@@ -115,7 +122,7 @@ function LoginPage() {
             <p className="text-center text-gray-400 text-sm mb-4">
               Quick Login (Demo)
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-3">
               <button
                 onClick={() => quickLogin("client")}
                 className="flex items-center justify-center gap-2 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 py-3 rounded-lg transition border border-blue-500/30"
@@ -129,6 +136,13 @@ function LoginPage() {
               >
                 <FaShieldAlt />
                 <span className="text-sm">Admin</span>
+              </button>
+              <button
+                onClick={() => quickLogin("freelancer")}
+                className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 text-green-400 py-3 rounded-lg transition border border-green-500/30"
+              >
+                <FaUser />
+                <span className="text-sm">Freelancer</span>
               </button>
             </div>
           </div>
@@ -147,6 +161,7 @@ function LoginPage() {
           <p>Demo Credentials:</p>
           <p>Client: client@gmail.com / 123456</p>
           <p>Admin: admin@gmail.com / 123456</p>
+          <p>Freelancer: freelancer@gmail.com / 123456</p>
         </div>
       </div>
     </div>
